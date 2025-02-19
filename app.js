@@ -32,7 +32,28 @@ const players = [
 
 // SECTION Logic
 
+function betTeam1() {
 
+  let team1Skill = 0
+
+  for (let i = 0; i < players.length; i++) {
+    const playerSkill = players[i];
+    if (playerSkill.teamNumber == 1) {
+      team1Skill += playerSkill.skill
+    }
+  }
+}
+function betTeam2() {
+
+  let team2Skill = 0
+
+  for (let i = 0; i < players.length; i++) {
+    const playerSkill = players[i];
+    if (playerSkill.teamNumber == 2) {
+      team2Skill += playerSkill.skill
+    }
+  }
+}
 
 
 // !SECTION
