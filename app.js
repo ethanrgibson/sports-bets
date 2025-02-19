@@ -66,10 +66,32 @@ function betTeam1(moneyDown) {
   if (team1Skill() < team2Skill()) {
     bank -= moneyDown
   }
-  else { bank += moneyDown }
+  else {
+    bank += moneyDown
+  }
 
   drawBank()
   reassignTeamNumber()
+}
+function betTeam2(moneyDown) {
+
+  if (team2Skill() < team1Skill()) {
+    bank -= moneyDown
+  }
+  else {
+    bank += moneyDown
+  }
+
+  drawBank()
+  reassignTeamNumber()
+}
+
+
+function betAllOnTeam1() {
+  betTeam1(bank)
+}
+function betAllOnTeam2() {
+  betTeam2(bank)
 }
 
 
