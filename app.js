@@ -27,6 +27,8 @@ const players = [
   { teamNumber: 2, emoji: '🐅', skill: 100, name: "Tiger" },
 ]
 
+const teamAssignment = [1, 2]
+
 // !SECTION
 
 
@@ -67,9 +69,17 @@ function betTeam1(moneyDown) {
 
   drawBank()
 
-
 }
 
+
+function generateRandomTeams() {
+
+  const teamAssignmentIndex = Math.floor(Math.random() * teamAssignment.length)
+  const teamAssignmentNumber = teamAssignment[teamAssignmentIndex]
+  return teamAssignmentNumber
+
+
+}
 
 // !SECTION
 
@@ -86,8 +96,12 @@ function drawTeam1() {
       emojis += player.emoji
     }
   }
+
+
   const team1ContainerElem = document.getElementById('team1')
   team1ContainerElem.innerText = emojis
+
+
 }
 function drawTeam2() {
   let emojis = ''
@@ -98,8 +112,11 @@ function drawTeam2() {
       emojis += player.emoji
     }
   }
+
+
   const team1ContainerElem = document.getElementById('team2')
   team1ContainerElem.innerText = emojis
+
 }
 
 function drawBank() {
@@ -109,11 +126,21 @@ function drawBank() {
 }
 
 
-function drawRandomTeams() {
 
-  Math.floor(Math.random)
+function reassignTeamNumber() {
 
+  let newTeamNumber = 0
+
+  for (let i = 0; i < players.length; i++) {
+    const randomTeam = players[i];
+    if (randomTeam.teamNumber == 1 || 2) {
+      newTeamNumber = generateRandomTeams()
+    }
+  }
+  return newTeamNumber
 }
+
+
 
 // !SECTION
 
