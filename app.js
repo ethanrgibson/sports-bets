@@ -69,7 +69,7 @@ function betTeam1(moneyDown) {
   else { bank += moneyDown }
 
   drawBank()
-
+  reassignTeamNumber()
 }
 
 
@@ -99,12 +99,11 @@ function drawTeam1() {
     }
   }
 
-  reassignTeamNumber()
-
   const team1ContainerElem = document.getElementById('team1')
   team1ContainerElem.innerText = emojis
-
+  reassignTeamNumber()
 }
+
 function drawTeam2() {
   let emojis = ''
 
@@ -115,16 +114,17 @@ function drawTeam2() {
     }
   }
 
-  reassignTeamNumber()
 
   const team1ContainerElem = document.getElementById('team2')
   team1ContainerElem.innerText = emojis
+  reassignTeamNumber()
 }
 
 function drawBank() {
 
   const bankElem = document.getElementById('bank')
   bankElem.innerText = bank.toString()
+
 }
 
 
@@ -135,10 +135,10 @@ function reassignTeamNumber() {
     const randomTeam = players[i];
     randomTeam.teamNumber = generateRandomTeams()
   }
+  drawTeam2()
+  drawTeam1()
 
 }
-
-
 
 // !SECTION
 
