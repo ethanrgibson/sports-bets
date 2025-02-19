@@ -9,3 +9,7 @@ body {
 main {
   flex-grow: 1;
 }
+
+.team-spot {
+  text-shadow: 1px 1px black;
+}
