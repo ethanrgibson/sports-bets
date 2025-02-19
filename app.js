@@ -46,6 +46,7 @@ function team1Skill() {
   }
   return team1Skill
 }
+
 function team2Skill() {
 
   let team2Skill = 0
@@ -88,6 +89,7 @@ function generateRandomTeams() {
 // SECTION Draw
 
 function drawTeam1() {
+
   let emojis = ''
 
   for (let i = 0; i < players.length; i++) {
@@ -97,10 +99,10 @@ function drawTeam1() {
     }
   }
 
+  reassignTeamNumber()
 
   const team1ContainerElem = document.getElementById('team1')
   team1ContainerElem.innerText = emojis
-
 
 }
 function drawTeam2() {
@@ -113,10 +115,10 @@ function drawTeam2() {
     }
   }
 
+  reassignTeamNumber()
 
   const team1ContainerElem = document.getElementById('team2')
   team1ContainerElem.innerText = emojis
-
 }
 
 function drawBank() {
@@ -129,15 +131,11 @@ function drawBank() {
 
 function reassignTeamNumber() {
 
-  let newTeamNumber = 0
-
   for (let i = 0; i < players.length; i++) {
     const randomTeam = players[i];
-    if (randomTeam.teamNumber == 1 || 2) {
-      newTeamNumber = generateRandomTeams()
-    }
+    randomTeam.teamNumber = generateRandomTeams()
   }
-  return newTeamNumber
+
 }
 
 
