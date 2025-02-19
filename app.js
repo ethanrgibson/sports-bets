@@ -32,7 +32,7 @@ const players = [
 
 // SECTION Logic
 
-function betTeam1() {
+function team1Skill() {
 
   let team1Skill = 0
 
@@ -42,8 +42,9 @@ function betTeam1() {
       team1Skill += playerSkill.skill
     }
   }
+  return team1Skill
 }
-function betTeam2() {
+function team2Skill() {
 
   let team2Skill = 0
 
@@ -53,6 +54,20 @@ function betTeam2() {
       team2Skill += playerSkill.skill
     }
   }
+  return team2Skill
+}
+
+
+function betTeam1(moneyDown) {
+
+  if (team1Skill() < team2Skill()) {
+    bank -= moneyDown
+  }
+  else { bank += moneyDown }
+
+  drawBank()
+
+
 }
 
 
@@ -89,12 +104,16 @@ function drawTeam2() {
 
 function drawBank() {
 
-  let bank = '0'
-
   const bankElem = document.getElementById('bank')
-  bankElem.innerText = bank
+  bankElem.innerText = bank.toString()
 }
 
+
+function drawRandomTeams() {
+
+  Math.floor(Math.random)
+
+}
 
 // !SECTION
 
