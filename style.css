@@ -3,6 +3,7 @@ body {
   flex-direction: column;
   min-height: 100dvh;
   justify-content: space-between;
+  background-color: rgb(255, 43, 255);
 }
 
 main {
