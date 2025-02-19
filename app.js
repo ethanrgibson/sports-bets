@@ -30,6 +30,15 @@ const players = [
 // !SECTION
 
 
+// SECTION Logic
+
+
+
+
+// !SECTION
+
+
+
 // SECTION Draw
 
 function drawTeam1() {
@@ -40,11 +49,20 @@ function drawTeam1() {
     if (player.teamNumber == 1) {
       emojis += player.emoji
     }
-
   }
-
-  console.log('here you go', emojis)
   const team1ContainerElem = document.getElementById('team1')
+  team1ContainerElem.innerText = emojis
+}
+function drawTeam2() {
+  let emojis = ''
+
+  for (let i = 0; i < players.length; i++) {
+    const player = players[i];
+    if (player.teamNumber == 2) {
+      emojis += player.emoji
+    }
+  }
+  const team1ContainerElem = document.getElementById('team2')
   team1ContainerElem.innerText = emojis
 }
 
@@ -53,3 +71,4 @@ function drawTeam1() {
 // !SECTION
 
 drawTeam1()
+drawTeam2()
