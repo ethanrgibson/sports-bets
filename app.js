@@ -101,7 +101,7 @@ function drawTeam1() {
 
   const team1ContainerElem = document.getElementById('team1')
   team1ContainerElem.innerText = emojis
-  reassignTeamNumber()
+
 }
 
 function drawTeam2() {
@@ -117,7 +117,7 @@ function drawTeam2() {
 
   const team1ContainerElem = document.getElementById('team2')
   team1ContainerElem.innerText = emojis
-  reassignTeamNumber()
+
 }
 
 function drawBank() {
