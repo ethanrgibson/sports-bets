@@ -87,9 +87,17 @@ function drawTeam2() {
   team1ContainerElem.innerText = emojis
 }
 
+function drawBank() {
+
+  let bank = '0'
+
+  const bankElem = document.getElementById('bank')
+  bankElem.innerText = bank
+}
 
 
 // !SECTION
 
 drawTeam1()
 drawTeam2()
+drawBank()
