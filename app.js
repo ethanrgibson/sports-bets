@@ -27,9 +27,29 @@ const players = [
   { teamNumber: 2, emoji: '🐅', skill: 100, name: "Tiger" },
 ]
 
+// !SECTION
 
 
+// SECTION Draw
+
+function drawTeam1() {
+  let emojis = ''
+
+  for (let i = 0; i < players.length; i++) {
+    const player = players[i];
+    if (player.teamNumber == 1) {
+      emojis += player.emoji
+    }
+
+  }
+
+  console.log('here you go', emojis)
+  const team1ContainerElem = document.getElementById('team1')
+  team1ContainerElem.innerText = emojis
+}
 
 
 
 // !SECTION
+
+drawTeam1()
