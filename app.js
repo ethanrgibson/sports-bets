@@ -64,7 +64,7 @@ function team2Skill() {
 function betTeam1(moneyDown) {
 
   if (bank < moneyDown) {
-    window.alert('you broke boy')
+    window.alert('You Broke Boy, B R O K E')
     return
   }
 
@@ -74,16 +74,16 @@ function betTeam1(moneyDown) {
   else {
     bank += moneyDown
   }
-
   drawBank()
   reassignTeamNumber()
 }
 function betTeam2(moneyDown) {
 
   if (bank < moneyDown) {
-    window.alert('you broke boy')
+    window.alert('You Broke Boy, B R O K E')
     return
   }
+
 
   if (team2Skill() < team1Skill()) {
     bank -= moneyDown
@@ -97,14 +97,21 @@ function betTeam2(moneyDown) {
 }
 
 
-function betAllOnTeam1() {
-  betTeam1(bank)
-  noMoney()
-}
-function betAllOnTeam2() {
-  betTeam2(bank)
-  noMoney()
-}
+// function betAllOnTeam1() {
+
+//   if (bank = 0) {
+//     window.alert('You Broke Boy, B R O K E')
+//     return
+//   }
+
+//   betTeam1(bank)
+// }
+
+
+// function betAllOnTeam2() {
+//   betTeam2(bank)
+
+// }
 
 
 function generateRandomTeams() {
@@ -116,14 +123,7 @@ function generateRandomTeams() {
 
 }
 
-function noMoney(betTeam1, betTeam2) {
 
-  if (bank < betTeam1, betTeam2) {
-    window.alert('You broke, man. You B R O K E')
-  }
-
-
-}
 
 // !SECTION
 
@@ -168,7 +168,7 @@ function drawBank() {
   const bankElem = document.getElementById('bank')
   bankElem.innerText = bank.toString()
 
-  noMoney()
+
 }
 
 
